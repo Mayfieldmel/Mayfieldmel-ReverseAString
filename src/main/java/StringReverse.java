@@ -1,3 +1,5 @@
+import java.util.List;
+import java.util.stream.Stream;
 
 public class StringReverse {
     /**
@@ -13,6 +15,12 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
-        return null;
+        char[] charArr = str.toCharArray();
+        String reverseString = "";
+        for (int i = 0; i < charArr.length; i++) {
+            reverseString += charArr[charArr.length - 1 - i];
+        }
+        return reverseString;
     }
+
 }
